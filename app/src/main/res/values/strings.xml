@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Testing Examples</string>
+    <string name="display_user_name">Hello %s!</string>
+</resources>
