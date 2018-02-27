@@ -20,6 +20,7 @@ class MainActivityTest {
 
     @Before
     fun setUp() {
+
     }
 
     @Test

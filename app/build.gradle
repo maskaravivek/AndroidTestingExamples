@@ -36,6 +36,7 @@ dependencies {
     kapt "com.google.dagger:dagger-android-processor:$DAGGER_VERSION"
 
     testImplementation "org.mockito:mockito-core:$MOCKITO_VERSION"
+    androidTestImplementation "org.mockito:mockito-core:$MOCKITO_VERSION"
 
     androidTestImplementation ('com.android.support.test:runner:1.0.1', {
         exclude group: 'com.android.support', module: 'support-annotations'
