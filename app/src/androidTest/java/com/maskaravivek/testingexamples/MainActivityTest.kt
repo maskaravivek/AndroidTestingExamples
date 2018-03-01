@@ -17,11 +17,6 @@ class MainActivityTest {
 
     @Rule @JvmField var activityActivityTestRule = ActivityTestRule(MainActivity::class.java)
 
-    @Before
-    fun setUp() {
-
-    }
-
     @Test
     fun setUserName() {
         onView(withId(R.id.name_field)).perform(typeText("Test"))

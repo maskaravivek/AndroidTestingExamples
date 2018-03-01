@@ -21,10 +21,6 @@ class TestExamplesApplication : ExamplesApplication() {
 
     @Module
     private inner class MockApplicationModule internal constructor(application: Application) : AppModule(application) {
-        override fun provideContext(): Context {
-            return application
-        }
-
         override fun provideUserService(context: Context): UserService {
             val mock = Mockito.mock(UserService::class.java)
             `when`(mock!!.displayUserName("Test")).thenReturn("Hello Test!")
