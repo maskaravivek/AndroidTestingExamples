@@ -3,6 +3,7 @@ package com.maskaravivek.testingexamples
 import android.app.Activity
 import android.app.Application
 import com.maskaravivek.testingexamples.di.AppComponent
+import com.maskaravivek.testingexamples.di.AppModule
 
 import com.maskaravivek.testingexamples.di.DaggerAppComponent
 
@@ -22,7 +23,7 @@ open class ExamplesApplication : Application(), HasActivityInjector {
     open fun initAppComponent(): AppComponent {
         return DaggerAppComponent
                 .builder()
-                .application(this)
+                .appModule(AppModule(this))
                 .build()
     }
 

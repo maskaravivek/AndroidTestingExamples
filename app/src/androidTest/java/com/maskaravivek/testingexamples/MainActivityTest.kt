@@ -12,7 +12,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 
-
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
 
@@ -25,8 +24,8 @@ class MainActivityTest {
 
     @Test
     fun setUserName() {
-        onView(withId(R.id.name_field)).perform(typeText("Vivek Maskara"))
+        onView(withId(R.id.name_field)).perform(typeText("Test"))
         onView(withId(R.id.set_user_name)).perform(click())
-        onView(withText("Hello Vivek Maskara!")).check(matches(isDisplayed()))
+        onView(withText("Hello Test!")).check(matches(isDisplayed()))
     }
 }

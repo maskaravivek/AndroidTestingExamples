@@ -9,10 +9,10 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 @Singleton
-class UserService @Inject
+open class UserService @Inject
 constructor(private var context: Context) {
 
-    fun displayUserName(name: String): String {
+    open fun displayUserName(name: String): String {
         val userNameFormat = context.getString(R.string.display_user_name)
         return String.format(Locale.ENGLISH, userNameFormat, name)
     }

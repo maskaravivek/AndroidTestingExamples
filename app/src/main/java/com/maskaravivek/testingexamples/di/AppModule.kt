@@ -10,11 +10,11 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-open class AppModule {
+open class AppModule(val application: Application) {
 
     @Provides
     @Singleton
-    internal fun provideContext(application: Application): Context {
+    internal open fun provideContext(): Context {
         return application
     }
 
